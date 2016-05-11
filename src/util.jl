@@ -75,7 +75,7 @@ function write_word2vec(path::AbstractString, vm::VectorModel, dict::Dictionary)
 	for v in 1:V(vm)
 		write(fout, "$(dict.id2word[v]) ")
 		for i in 1:M(vm)
-			write(fout, vm.In[i, 1, v])
+			write(fout, "$(vm.In[i, 1, v]) ")
 		end
 		write(fout, "\n")
 	end
